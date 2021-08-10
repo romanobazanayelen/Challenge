@@ -1,0 +1,29 @@
+*/Supuestos: 
+*/bq_table : se define como la tabla de BigQuery original
+*/ id_event = 1 (primer logueo de un usuario)
+
+*/ Dim_user
+Create table Dim_user as 
+Select distinct user_id, segment_id from bq_table
+
+*/ Dim_segment
+Create table Dim_segment as
+Select distinct segment_id, segment_description from bq_table
+
+*/ Dim_session
+Create table Dim_session as
+Select distinct session_id, user_id, user_city, device_browser, device_os, device_mobile, time_spent from bq_table
+
+*/ Dim_event
+Create table Dim_event as 
+Select distinct event_id, event_description from bq_table 
+
+*/ Fact_First_logon
+Create table Fact_First_logon as
+Select distinct id_session, server_time, date(server_time) as server_date, crash_detection from bq_table
+where id_evento = 1
+
+*/ Fact_Daily_Operation
+Create table Fact_Daily_operation as
+Select distinct id_session, server_time, date(server_time) as server_date, event_id, crash_detection from bq_table
+where id_evento <> 1 

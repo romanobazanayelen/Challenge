@@ -1,0 +1,7 @@
+import io
+import re
+csv= io.open("C:\datos_data_engineer.csv",mode="w",encoding="utf-8")
+with io.open("C:\datos_data_engineer.tsv",mode="r",encoding="utf-16LE") as tsv:
+    for line in tsv:
+        csv.write(re.sub('\t','|',line))
+csv.close()

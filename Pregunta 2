@@ -1,1 +1,11 @@
+A la hora de realizar la ingesta de datos, tendría en cuenta los siguientes parámetros, ya que su configuración va a estar ligada básicamente al consumo de fuente y rendimiento de Spark: 
 
+- spark.executor.instances: Número de ejecutores de la aplicación Spark .
+- spark.executor.memory: Cantidad de memoria a usar para cada ejecutor que ejecuta la tarea.
+- spark.executor.cores: Número de tareas simultáneas que puede ejecutar un ejecutor.
+- spark.driver.memory: cantidad de memoria que se utilizará para el controlador.
+- spark.driver.cores: Número de núcleos virtuales que se utilizarán para el proceso del controlador.
+- spark.sql.shuffle.partitions: número de particiones que se utilizarán al barajar datos para combinaciones o agregaciones.
+- spark.default.parallelism: número predeterminado de particiones en conjuntos de datos distribuidos resilientes (RDD) devueltos por transformaciones como uniones y agregaciones.
+
+Los resultados los escribiría en Avro, porque es un formato de comprensión que 

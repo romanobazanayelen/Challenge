@@ -1,1 +1,11 @@
+Para garantizar la confiabilidad de los datos haría hincapié en los siguientes puntos: 
 
+- Consistencia: los datos deben coincidir de forma exacta con la información previo a todos los procesos de tranformación y carga que se realicen.
+- Exactitud:los datos deben ser precisos, y que reflejen de manera exacta la realidad.
+- Integridad: la información debe ser nítida no solo en el modelo, sino con respecto al resto de las tablas y modelos, tanto en datos, como en estructura.
+- Completitud: la información debe ser fiable y completa, no puede faltar ningun segmento. Por ejemplo, no puede haber días sin registros de actividad, o usuarios con registros de
+actividad parciales.
+- Usabilidad: los datos deben estar disponibles para los usuarios de una manera que los puedan analizar y comprender rápidamente, por lo cual la estructura de los datos debe respetar
+las definiciones del negocio y disponibilizaría querys o interfaces que le permita a los usuarios navegar y realizar sus análisis. 
+- Disponibilidad: los datos deben actualizarse de manera correcta y continua adaptandose a las necesidades de los usuario. Además, los usuarios deben poder tener las herramientas
+necesarias para acceder a la información de manera simple y eficiente (por ejemplo: interfaces, reportes)

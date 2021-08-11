@@ -1,1 +1,16 @@
+A partir de la tabla inicial, definiría cuales son las entidades que intervienen para crear una tabla de tipo dimensión para cada una de ellas, con el objetivo, de que todos
+los atributos se guarden en dichas tablas y quitar información redundante de las tablas principales.
+Por ejemplo, actualmente las descripciones de segmento y evento, se repiten en la tabla en todos los registros que correspondan al mismo segmento o evento. 
+Lo mismo ocurre con los atributos, si cada usuario pertenece a un segmento, el segmento se va a repetir en todos los registros de ese usuario, por lo cual, en esos casos 
+definiría el segmento como atributo del usuario. De esta manera, buscaría todas las relaciones entre entidades para definirlas como atributos, a los cuales voy a poder acceder
+a través de la navegabilidad de los datos.
 
+Por otro lado, crearía un campo de tipo Date, a partir del campo SERVER_TIME, el cual nos servirá para agrupar la información de la tabla por día, sin tener en cuenta la hora. 
+Crearía una dimensión TIME estándar, con toda la información relacionada a day, month, year, quarter, descripciones, la cual voy a relacionar a las tablas principales
+a través del campo de tipo Date previamente creado.
+
+Aprovecharía este proceso de migración, para validar los datos nulos, vacíos o érroneos, id únicos en cada dimensión y que la cardinalidad de las relaciones entre las entidades 
+estén acorde a las definiciones del negocio. 
+
+Utilizaría una herramienta de ETL la cual garantice la integridad y calidad de los datos, permitiendo realizar la auditoría de los procesos de carga y actualización. 
+En este caso, donde la base de datos es Big Query, propongo utilizar una herramienta de Google, que se adapte a grandes cantidades de datos. 

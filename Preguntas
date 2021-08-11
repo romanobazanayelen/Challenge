@@ -1,6 +1,13 @@
-Implementaría una cola de mensajes en una solución orientada a objetos para 
-Utilizaría Java como lenguaje porque .
+Implementaría una cola de mensajes en una solución orientada a objetos para la interacción con el usuario final, mostrando diferentes mensajes dependiendo el evento realizado por
+el usuario, si dicho evento termina correctamente o con error. 
+Utilizaría Java como lenguaje por su característica principal de ser orientado a objetos.
 
 No poseo experiencia con py spark o spark scala. 
 
-Desde el área de ingeniería de datos, utilizaría una API para 
+Desde el área de ingeniería de datos, implementaría una API que permita a través de ciertos parámetros y dependiendo el rol del usuario, acceder a la información de la actividad
+diaria de los usuarios devolviendo un archivo plano. 
+Con respecto a los roles, por ejemplo, si el usuario es un ejecutivo de cuentas que pueda acceder a la actividad diaria de sus usuarios, si es un gerente de una sucursal o región,
+que pueda acceder a los usuarios que pertenecen a dicha región. 
+Sobre los parámetros, definiría valores de entrada con respecto a las fechas, también se debería ingresar el usuario que quiere acceder a la información y poder filtrar si desea 
+visualizar información sobre un usuario puntual. 
+
